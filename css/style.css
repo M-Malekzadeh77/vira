@@ -1,0 +1,25 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::beforem,
+*::after{
+    box-sizing: inherit;
+}
+
+:root{
+    --color-primery:#002b6e;
+    --color-secondary:#0057ae;
+    --color-shape:#00B1EE;
+    --color-gray:gray;
+    --color-white:#ffff;
+    --color-black:black;
+}
+
+.inner-container{
+    display: block;
+    width: 85%;
+    margin: auto;
+    margin-left: auto;
+}
