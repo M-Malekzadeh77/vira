@@ -93,7 +93,7 @@ header-nav{
     justify-content: space-around;
 }
 
-@media  (min-width:55em){
+@media screen and (min-width:768px){
     header-nav{
         flex-direction: row;
         justify-content: space-between;
@@ -112,14 +112,86 @@ header-nav{
 /* hero config */
 
 .hero{
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.hero-fig figure{
-    background-image: url("../images/healthcare-2.jpg");
+.hero-fig{
+    position: relative;
+    width: 330px;
+}
+
+.hero-fig img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.hero-fig::after{
+    position: absolute;
+    content: "";
+    border: 3px solid var(--color-shape);
+    border-radius: 15px;
+    width: 210px;
+    height: 330px;
+    bottom: 28%;
+    left: 45%;
+    z-index: -1;
+}
+
+.hero-fig::before{
+    position: absolute;
+    content: "";
+    border: 3px solid var(--color-secondary);
+    border-radius: 15px;
+    width: 210px;
+    height: 330px;
+    top: 28%;
+    right: 45%;
+    z-index: -1;
 }
 
 .hero-figcaption{
+    margin-top: 5.5rem;
+}
 
+.hero-figcaption h1{
+    font-size: 3rem;
+    color: var(--color-primery);
+}
+
+.hero-figcaption p{
+    color: var(--color-gray);
+    font-size: 1rem;
+    margin-top: 2.5rem;
+}
+
+@media screen and (min-width:992px){
+    .hero{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+    .hero-fig{
+        flex: 0 0 auto;
+    }
+
+    .hero-figcaption{
+        margin-top: 0;
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width:1200px){
+    .hero-figcaption{
+        width: 60%;
+    }
 }
