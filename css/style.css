@@ -22,7 +22,7 @@ html{
     --color-primery:#002b6e;
     --color-secondary:#0057ae;
     --color-shape:#00B1EE;
-    --color-shape-lite:#00d5f1;
+    --color-shape-lite:#00c6e0;
     --color-gray:gray;
     --color-white:#ffff;
     --color-black:black;
@@ -246,6 +246,7 @@ header-nav{
 }
 
 .addon .content .title h3{
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.9rem;
     color: var(--color-shape);
     margin: 0;
@@ -255,8 +256,102 @@ header-nav{
 
 .addon .content p{
     color: var(--color-gray);
-    font-size: .9rem;
+    font-size: 1rem;
     margin: 0;
     margin-top: 1rem;
+}
+
+/* section best-product config */
+
+.best-product{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.best-product-fig{
+    position: relative;
+    width: 330px;
+}
+
+.best-product-fig img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.best-product-fig::before{
+    position: absolute;
+    content: "";
+    border: 3px solid var(--color-secondary);
+    border-radius: 15px;
+    width: 210px;
+    height: 330px;
+    top: 28%;
+    right: 45%;
+    z-index: -1;
+}
+
+.best-product-figcaption{
+    margin-top: 5.5rem;
+}
+
+.best-product-figcaption h1{
+    font-size: 2.5rem;
+    color: var(--color-primery);
+}
+
+.best-product-figcaption .fig-btn{
+    display: inline-block;
+    padding: .7rem 1.9rem;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 7px;
+    background: var(--color-shape-lite);
+    border: 2px solid var(--color-shape-lite);
+    color: var(--color-white);
+    font-size: 1.1em;
+}
+
+.best-product-figcaption .row{
+    margin-top: 2.5rem;
+}
+
+.best-product-figcaption .row i{
+    font-size: 1.8rem;
+    vertical-align: middle;
+}
+
+.best-product-figcaption .row span{
+    font-size: 1.1rem;
     font-weight: 900;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+
+.best-product-figcaption .row p{
+    margin-top: 1rem;
+    color: var(--color-gray);
+}
+
+@media screen and (min-width:992px){
+    .best-product{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+    .best-product-fig{
+        flex: 0 0 auto;
+    }
+
+    .best-product-figcaption{
+        margin-top: 0;
+        width: 50%;
+    }
+
 }
