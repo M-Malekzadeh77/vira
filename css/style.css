@@ -22,6 +22,7 @@ html{
     --color-primery:#002b6e;
     --color-secondary:#0057ae;
     --color-shape:#00B1EE;
+    --color-shape-lite:#00d5f1;
     --color-gray:gray;
     --color-white:#ffff;
     --color-black:black;
@@ -39,6 +40,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'yekan',"Helvetica Neue",sans-serif !important;
+    min-width: 390px;
 }
 
 input,
@@ -109,7 +111,7 @@ header-nav{
     }
 }
 
-/* hero config */
+/* section hero config */
 
 .hero{
     margin-top: 8rem;
@@ -200,4 +202,61 @@ header-nav{
     .hero-figcaption{
         width: 60%;
     }
+}
+
+.hero-figcaption .fig-btn{
+    display: inline-block;
+    padding: .7rem 1.5rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    border-radius: 7px;
+    background: var(--color-shape-lite);
+    border: 2px solid var(--color-shape-lite);
+    color: var(--color-white);
+    font-size: 1.1em;
+}
+
+.hero-figcaption .fig-btn:last-child{
+    background: none;
+    color: var(--color-shape-lite);
+}
+
+/* section addon config */
+
+.addon{
+    margin-top: 10rem;
+}
+.addon .addon-col{
+    display: flex;
+    padding: 1em 0;
+}
+
+.addon .addon-col::before{
+    display: flex;
+    content: " ";
+    height: 100%;
+    background: var(--color-shape);
+    width: 5px;
+    margin-left:1em;
+}
+
+.addon .content .title{
+    display: flex;
+    align-items: center;
+}
+
+.addon .content .title h3{
+    font-size: 1.9rem;
+    color: var(--color-shape);
+    margin: 0;
+    margin-left: 1.5rem;
+    font-weight: 700;
+}
+
+.addon .content p{
+    color: var(--color-gray);
+    font-size: .9rem;
+    margin: 0;
+    margin-top: 1rem;
+    font-weight: 900;
 }
