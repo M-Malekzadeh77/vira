@@ -23,6 +23,10 @@ html{
     --color-secondary:#0057ae;
     --color-shape:#00B1EE;
     --color-shape-lite:#00c6e0;
+    --color-fantesy-pink:#FF456F;
+    --color-fantesy-green:#5BCE99;
+    --color-fantesy-orange:#EC5334;
+    --color-fantesy-Purple:#4D4EDB;
     --color-gray:gray;
     --color-white:#ffff;
     --color-black:black;
@@ -30,7 +34,7 @@ html{
 
 .inner-container{
     display: block;
-    width: 85%;
+    width: 80%;
     margin: auto;
     margin-left: auto;
 }
@@ -118,7 +122,7 @@ header-nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 70em;
+    max-width: 75em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -164,8 +168,9 @@ header-nav{
 }
 
 .hero-figcaption h1{
-    font-size: 3rem;
+    font-size: 2.7rem;
     color: var(--color-primery);
+    font-weight: 900;
 }
 
 .hero-figcaption p{
@@ -224,7 +229,7 @@ header-nav{
 /* section addon config */
 
 .addon{
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 .addon .addon-col{
     display: flex;
@@ -264,7 +269,7 @@ header-nav{
 /* section best-product config */
 
 .best-product{
-    margin-top: 10rem;
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,8 +306,9 @@ header-nav{
 }
 
 .best-product-figcaption h1{
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--color-primery);
+    font-weight: 800;
 }
 
 .best-product-figcaption .fig-btn{
@@ -324,6 +330,19 @@ header-nav{
 .best-product-figcaption .row i{
     font-size: 1.8rem;
     vertical-align: middle;
+    color: var(--color-fantesy-Purple);
+}
+
+.best-product-figcaption .row div:nth-child(2) i{
+    color: var(--color-fantesy-pink);
+}
+
+.best-product-figcaption .row div:nth-child(3) i{
+    color: var(--color-fantesy-orange);
+}
+
+.best-product-figcaption .row div:nth-child(4) i{
+    color: var(--color-fantesy-green);
 }
 
 .best-product-figcaption .row span{
@@ -354,4 +373,90 @@ header-nav{
         width: 50%;
     }
 
+}
+
+/* product demo section config  */
+
+.product-demo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+    margin-top: 9rem;
+    background: #00c6e009;
+    padding: 5rem 0;
+}
+
+.product-demo-container .inner-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-demo-container h3{
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--color-primery);
+    margin-bottom: 1rem;
+}
+
+.product-demo{
+    margin-top: 2em;
+    flex-grow: 1;
+    position: relative;
+    height: 30em;
+    width: 100%;
+    background-image: url("../images/pexels-artem-podrez-5726794.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    align-self: center;
+    max-width: 60em;
+}
+
+.popup-vieo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: var(--color-shape);
+    padding: 1.5rem;
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+.popup-vieo::before{
+    content: " ";
+    position: absolute;
+    width: 5.1rem;
+    height: 5.1rem;
+    border: 3px solid var(--color-white);
+    border-radius: 50%;
+    animation: icon-bubble 1s infinite forwards linear .5s;
+}
+
+.popup-vieo::after{
+    content: " ";
+    position: absolute;
+    width: 5.1rem;
+    height: 5.1rem;
+    border: 3px solid var(--color-white);
+    border-radius: 50%;
+    animation: icon-bubble 1s infinite forwards linear ;
+}
+
+@keyframes icon-bubble {
+    0%{
+        width: 5.1rem;
+        height: 5.1rem;
+    }
+    100%{
+        width: 6.8rem;
+        height: 6.8rem;
+        opacity: 0;
+    }
 }
