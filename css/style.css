@@ -403,6 +403,7 @@ header-nav{
 
 .product-demo{
     margin-top: 5rem;
+    margin-bottom: 2rem;
     flex-grow: 1;
     position: relative;
     height: 30em;
@@ -517,4 +518,104 @@ header-nav{
         height: 6.8rem;
         opacity: 0;
     }
+}
+
+/* our products section */
+/* --Swiper's style-- */
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-top: 4.5rem !important;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    top: 7% !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 1.2rem !important;
+    font-weight: 900;
+    color: var(--color-primery);
+    transition: color .3s ease;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after{
+    color: var(--color-shape);
+}
+
+.swiper-button-prev{
+    right: 0 !important;
+    left: auto !important;
+}
+
+.swiper-button-next{
+    left: auto !important;
+    right: 40px !important;
+}
+
+.our-products{
+    margin-top: 4rem;
+}
+
+.our-products h2{
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--color-primery);
+    margin-bottom: 2rem;
+}
+
+/* card */
+
+.my-card img{
+    width: 100%;
+    height: 20rem;
+    border-radius: 3%;
+}
+
+.my-card-body{
+    padding: 1rem;
+}
+
+.my-card-title{
+    color: var(--color-primery);
+    font-weight: 900;
+}
+
+.my-card-text{
+    color: var(--color-gray);
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.my-card-body a{
+    color: var(--color-secondary);
 }
