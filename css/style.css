@@ -619,3 +619,60 @@ header-nav{
 .my-card-body a{
     color: var(--color-secondary);
 }
+
+/* comment section */
+
+.customer-comments{
+    margin-top: 10rem;
+    position: relative;
+}
+
+.comment-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:var(--color-primery);
+    color: var(--color-white);
+    width: 100%;
+    border-radius: 1rem;
+    z-index: 0;
+}
+
+.customer-comments img{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    clip-path: circle(70px at center);
+}
+
+.customer-comments .image{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.customer-comments .image::after{
+    position: absolute;
+    content: "";
+    width: 9.5rem;
+    height: 9.5rem;
+    border-radius: 100%;
+    background: white;
+    z-index: -1;
+}
+
+.customer-comments .image{
+    position: absolute;
+    border-radius: 100%;
+    top: -6rem;
+}
+
+.customer-comments p{
+    margin-top: 7rem;
+    padding: 0 2.2rem 2rem 2.2rem;
+    text-align: justify;
+}
+
