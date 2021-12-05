@@ -65,6 +65,10 @@ textarea{
     font-family: inherit;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 a{
     text-decoration: none;
     color: inherit;
@@ -880,15 +884,50 @@ header-nav{
 
 /* Newsletter section */
 
-/* .newsletter{
+.newsletter{
     margin-top: 8rem;
     background-image: url("../images/Mask\ Group2.png");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
-    padding: .1px;
+    padding: 4rem;
+    text-align: center;
 }
 
 .newsletter h2{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.newsletter p{
     margin-top: 2rem;
-} */
+}
+
+.newsletter .reg-email-frm{
+    margin-top: 4rem;
+    position: relative;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter .reg-email-frm .inp-email{
+    font-size: .9rem;
+    border-radius:50px;
+    padding: 1.2rem;
+    width: 100%;
+    border: none;
+}
+
+.newsletter .reg-email-frm .inp-btn{
+    position: absolute;
+    left: 0;
+    width: 6.5rem;
+    height: 100%;
+    vertical-align: middle;
+    border: 6px solid white;
+    border-radius: 50px;
+    background-color: var(--color-secondary-lite);
+    color: #fff;
+}
+
