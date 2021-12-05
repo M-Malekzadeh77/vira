@@ -18,9 +18,21 @@ html{
     font-style: normal;
 }
 
+/* defining the right font-family/font-face for each style */
+/* .icon-solid::before,
+.icon-regular::before,
+.icon-light::before {
+  font-family: "Font Awesome 5 Pro";
+}
+
+.icon-brand::before {
+  font-family: "Font Awesome 5 Brands";
+} */
+
 :root{
     --color-primery:#002b6e;
     --color-secondary:#0057ae;
+    --color-secondary-lite:#0074e9;
     --color-shape:#00B1EE;
     --color-shape-lite:#00c6e0;
     --color-fantesy-pink:#FF456F;
@@ -559,11 +571,15 @@ header-nav{
 
 .swiper-button-next::after,
 .swiper-button-prev::after{
+    font-family: "Font Awesome 5 Pro";
     font-size: 1.2rem !important;
     font-weight: 900;
     color: var(--color-primery);
     transition: color .3s ease;
 }
+
+.swiper-button-next::after{content: '\f060' !important;}
+.swiper-button-prev::after{content: '\f061' !important;}
 
 .swiper-button-next:hover::after,
 .swiper-button-prev:hover::after{
@@ -625,6 +641,17 @@ header-nav{
 .customer-comments{
     margin-top: 10rem;
     position: relative;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.customer-comments h2{
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--color-primery);
+    margin-bottom: 8rem;
 }
 
 .comment-container{
@@ -632,11 +659,12 @@ header-nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background:var(--color-primery);
+    background:var(--color-secondary-lite);
     color: var(--color-white);
-    width: 100%;
+    max-width: 25rem;
     border-radius: 1rem;
     z-index: 0;
+    text-align: center;
 }
 
 .customer-comments img{
@@ -669,10 +697,198 @@ header-nav{
     border-radius: 100%;
     top: -6rem;
 }
-
+.customer-comments h5{
+    margin-top: 6rem;
+}
 .customer-comments p{
-    margin-top: 7rem;
-    padding: 0 2.2rem 2rem 2.2rem;
+    position: relative;
+    padding:1.7rem 3.5rem;
     text-align: justify;
+    font-size: .9rem;
 }
 
+.customer-comments p::before{
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    position: absolute;
+    content: '\f10e';
+    top:0;
+    right: 2.2rem;
+}
+.customer-comments p::after{
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: '\f10d';
+    position: absolute;
+    bottom:0;
+    left: 2.2rem;
+}
+
+.commentSwiper{
+    margin-bottom: 2rem;
+    padding-bottom: 5rem;
+}
+
+.swiper-pagination{
+    /* bottom: 0rem !important; */
+}
+
+.swiper-pagination .swiper-pagination-bullet{
+    border: 1px solid var(--color-shape);
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,11px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,11px));
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    width: 1.7rem !important;
+    border-radius: 5px !important;
+    background-color: var(--color-shape);
+}
+
+/* blog section */
+
+.blog{
+    margin-top: 8rem;
+}
+
+.blog h2{
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--color-primery);
+}
+
+.blog .row{
+    margin-top: 6rem;
+}
+
+.post-col{
+    display: flex;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.blog-card{
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  -20px 20px 60px #d9d9d9,
+                 20px -20px 60px #ffffff;
+    width: 100%;
+    height: 100%;
+    max-width: 23rem;
+    transition: all .2s ease-in-out;
+}
+
+.blog-card:hover{
+    margin-top: -1.5rem;
+}
+
+.post-content{
+    padding: 1rem 1rem .5rem 1rem;
+}
+
+.blog-card .post-image{
+    position: relative;
+}
+
+.blog-card .post-image img{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.blog-card .post-image ul{
+    position: absolute;
+    display: flex;
+    padding: .5rem;
+    margin: 0;
+    font-size: .7rem;
+    font-weight: bold;
+    top: 0;
+}
+
+.blog-card .post-image ul::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: .8;
+    z-index: 1;
+}
+
+.blog-card .post-image ul > li{
+    z-index: 100;
+}
+
+.blog-card .post-image ul > li > i{
+    margin-left: .5rem;
+}
+
+.blog-card .post-image ul > li:not(:last-child)::after{
+    content: '|';
+    padding: .5rem;
+}
+
+.blog-card .post-heading{
+    font-size: .9rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.blog-card .post-excerpt{
+    font-size: .8rem;
+    text-align: justify;
+    margin-top: 1rem;
+    color: var(--color-gray);
+}
+
+.blog-card .post-link{
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.blog-card .post-link a{
+    transition: all .2s ease-in-out;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.blog-card .post-link a:hover{
+    color: var(--color-shape);
+}
+
+.blog-card .post-link a:hover::after{
+    left: -10px;
+}
+
+.blog-card .post-link a::after{
+    position: absolute;
+    font-family: "Font awesome 5 Pro";
+    content: '\f177';
+    vertical-align: middle;
+    top: 8.5px;
+    left: -2px;
+    transition: left .2s ease-in-out;
+}
+
+/* Newsletter section */
+
+/* .newsletter{
+    margin-top: 8rem;
+    background-image: url("../images/Mask\ Group2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    padding: .1px;
+}
+
+.newsletter h2{
+    margin-top: 2rem;
+} */
